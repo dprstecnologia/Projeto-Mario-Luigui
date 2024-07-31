@@ -5,8 +5,6 @@
     font-family: 'Mukta', sans-serif;
 }
 
-
-
 .mascara-form {
     visibility: hidden;
     transition: visibility 1s linear;
@@ -30,10 +28,11 @@ header a {
     text-decoration: none;
 }
 
-header a:hover{
+header a:hover {
     color: #C51111;
     transition: 0.5s color ease-in-out;
 }
+
 .logo-header {
     height: 80px;
     margin: 20px;
@@ -44,6 +43,7 @@ header a:hover{
     height: 100vh;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap; /* Adicionando flex-wrap para melhor ajuste em telas menores */
 }
 
 .background {
@@ -70,8 +70,6 @@ header a:hover{
     height: 100%;
     background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
 }
-
-
 
 button {
     font-weight: 600;
@@ -104,6 +102,7 @@ p {
 
 .sobre-nos {
     max-width: 40%;
+    text-align: center;
 }
 
 .fale-conosco {
@@ -120,21 +119,20 @@ p {
     /* transform: translateX(0); */
 }
 
-input {
-    height: 40px;
+input, textarea {
     border-radius: 5px;
     border: 1px solid gray;
     padding-left: 10px;
     outline-color: #18D80F;
 }
 
+input {
+    height: 40px;
+}
+
 textarea {
     height: 80px;
-    width: 300px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    padding-left: 10px;
-    outline-color: #18D80F;
+    width: 100%; /* Usando 100% para ajuste melhor */
     padding: 10px;
 }
 
@@ -147,6 +145,20 @@ textarea {
 
 .whatsapp img {
     height: 60px;
+}
+
+@media (max-width: 1200px) {
+    .sobre-nos {
+        max-width: 50%;
+    }
+
+    .logo {
+        height: 150px;
+    }
+
+    .mario {
+        height: 50%;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -171,18 +183,45 @@ textarea {
         height: auto;
     }
 
-    .header {
+    header {
         margin: 20px;
         justify-content: center;
-
     }
 
-    .header img {
+    header img {
         display: none;
     }
 
-    .header a {
+    header a {
         font-size: 18px;
     }
 
+    .sobre-nos {
+        max-width: 80%;
+    }
+
+    .fale-conosco {
+        width: 80%;
+        left: -100%;
+    }
+
+    .whatsapp img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        height: 100px;
+    }
+
+    button {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .mario {
+        height: 40%;
+    }
 }
