@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head><!-- Inicio da Inteligencia -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- mapeando o style.css -->
+    <title>Mario Bros</title>
+</head><!-- Fim da Inteligencia -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+
+<body><!-- Inicio Parte Visual -->
+    <div class="mascara-form" onclick="hideForm()"></div>
+
+    <header><!-- Menus Principal -->
+        <img src="./Imagens/icon.png" class="logo-header" /><!-- Logo Menu - Inserindo Imagem-->
+        <a href="index.html">Home</a><!-- Pagina Inicial -->
+        <a onclick="showForm()">Fale Conosco</a><!-- Pagina 1 -->
+        <a href="./nossos-servicos.html">Nossos Serviços</a><!-- Pagina 2 -->
+    </header><!-- Fim Menu Principal -->
+
+    <div class="container"><!-- Tela de Fundo -->
+        <div class="background">
+            <video loop autoplay muted class="conteudo-background"><!-- Inserindo Video -->
+                <source src="./Videos/video.mp4">
+            </video>
+            <!-- <img src="./assets/backgroud.jpeg" class="conteudo-background"/> -->
+            <div class="mascara-video"></div><!-- Mascara Tela de Fundo -->
+        </div><!-- Fim Tela de Fundo -->
+
+        <a class="whatsapp"><img src="./Imagens/whatsapp.png" /></a><!-- Inserindo whatsapp-->
+
+        <form action="https://formsubmit.co/contato@gmail.com" method="POST" class="fale-conosco">
+            <!-- Inserindo Email-->
+            <input type="text" name="name" placeholder="Seu Nome" required><!-- Inserindo Email-->
+            <input type="email" name="email" placeholder="Telefone" required><!-- Inserindo Email-->
+            <textarea type="text" placeholder="Digite seu problema"></textarea><!-- Inserindo Email-->
+            <button type="submit">Pedir Orçamento</button><!-- Botão de envio do Email-->
+        </form><!-- Fim Email-->
+
+    </div>
+</body><!-- Fim Parte Visual -->
+
+<script src="./script.js"></script><!-- Chamando o NODE JS e seus scripts -->
+
+</html>
